@@ -33,7 +33,7 @@ app.post("/app/new", (req, res) => {
 
 	// Update response json to include most recent ID and status 201
 	res.json({"message": "1 record created ID " + info.lastInsertRowid + " (201)"})
-	res.status(201);
+	res.status(200);
 });
 
 // READ a list of all users (HTTP method GET) at endpoint /app/users/
