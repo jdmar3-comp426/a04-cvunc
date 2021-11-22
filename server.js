@@ -32,7 +32,7 @@ app.post("/app/new", (req, res) => {
 	const info = stmt.run(req.body.user, md5(req.body.pass));
 
 	// Update response json to include most recent ID and status 201
-	res.json({"message": "1 record created ID " + info.lastInsertRowid + " (201)"})
+	res.json({"message": "1 record created: ID " + info.lastInsertRowid + " (201)"})
 	res.status(201);
 });
 
